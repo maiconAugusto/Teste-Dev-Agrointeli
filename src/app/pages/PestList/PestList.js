@@ -14,7 +14,7 @@ const PestList = ({navigation}) =>{
 
     useEffect(() =>{
         PestListData()
-    },[])
+    },[]);
 
     async function PestListData(){
         try{
@@ -37,7 +37,7 @@ const PestList = ({navigation}) =>{
         return(
             <TouchList  onPress={()=> navigation.navigate('FeedBack',{ 
                 name: item.name, quantity: item.quantity, 
-                condition: ((item.quantity / 250) * 100) >= 30 ? false : true})}>
+                condition: ((item.quantity / 250) * 100) > 30 ? false : true})}>
                 <SpaceName>
                     <Text ellipsizeMode={"middle"}>{item.name}</Text>
                     <Progress quantity={item.quantity} size={180}/>
