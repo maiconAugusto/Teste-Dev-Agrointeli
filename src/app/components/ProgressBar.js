@@ -7,7 +7,7 @@ export default function (props) {
         animated={true}
         style={{ marginLeft: 10, marginRight: 8}}
         progress={(((props.quantity / 250 ) * 100) / 100) } 
-        color={((props.quantity / 250) * 100) >= 30 ? '#FF6161' : '#97FF9F'}
+        color={((props.quantity / 250) * 100) > 30 ? '#FF6161' : '#97FF9F'}
         width={props.size}
         height={10}
         borderColor='#E5E5E5'

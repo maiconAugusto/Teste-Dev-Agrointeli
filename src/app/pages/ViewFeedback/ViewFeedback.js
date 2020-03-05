@@ -1,10 +1,10 @@
 import React from 'react';
-import { Background } from '../index'
-import { ViewCard, Card, Avatar, Container, TextInfo, TextAlertInfo,TextNameAlert } from './index'
+import { Background } from '../index';
+import { ViewCard, Card, Avatar, Container, TextInfo, TextAlertInfo,TextNameAlert } from './index';
 import { Icon } from 'react-native-elements';
-import ProgressBar from '../../components/ProgressBar'
+import ProgressBar from '../../components/ProgressBar';
 
-const ViewFeedback = ({router,navigation})=>{
+const ViewFeedback= ({router,navigation}) =>{
     const condition = navigation.getParam('condition')
     const quantity = navigation.getParam('quantity')
     const name = navigation.getParam('name')

@@ -5,7 +5,7 @@ import Router from './router/router';
 const App= () =>{
   return (
     <>
-      <StatusBar backgroundColor='#005D00'/>
+      <StatusBar backgroundColor='#005D00' barStyle='dark-content'/>
       <Router/>
     </>
   )
