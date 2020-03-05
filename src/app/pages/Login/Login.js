@@ -2,14 +2,14 @@ import React,{ useEffect, useState } from 'react'
 import { Animated } from 'react-native'
 import { PageLogin, Form, InputForm, ButtonForm, TextFormButton } from './index'
 
-const Login= ({navigation})=>{
+const Login= ({navigation}) =>{
     const[offset] = useState( new Animated.ValueXY({x: 100, y: 0}))
     useEffect(()=>{
         Animated.spring(offset.x,{
             toValue: 0,
             speed: 1,
-            bounciness: 8,
-        }).start()
+            bounciness: 4,
+        }).start();
     },[])
     return(
         <PageLogin>
@@ -25,4 +25,4 @@ const Login= ({navigation})=>{
         </PageLogin>
     )
 }
-export default Login
+export default Login;

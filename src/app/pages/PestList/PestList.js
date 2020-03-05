@@ -12,7 +12,7 @@ const PestList = ({navigation}) =>{
     const [pests, setPests]= useState([]);
     const [loading, setloading]= useState(false)
 
-    useEffect(()=>{
+    useEffect(() =>{
         PestListData()
     },[])
 
@@ -35,20 +35,20 @@ const PestList = ({navigation}) =>{
     }
     function renderItem(item){
         return(
-                <TouchList  onPress={()=> navigation.navigate('FeedBack',{ 
-                    name: item.name, quantity: item.quantity, 
-                    condition: ((item.quantity / 250) * 100) >= 30 ? false : true})}>
-                    <SpaceName>
-                        <Text ellipsizeMode={"middle"}>{item.name}</Text>
-                        <Progress quantity={item.quantity} size={180}/>
-                    </SpaceName>
-                    <SpaceIcon>
-                        <Icon
-                        name='navigate-next'
-                        color='#757575'
-                        />
-                    </SpaceIcon>
-                </TouchList>
+            <TouchList  onPress={()=> navigation.navigate('FeedBack',{ 
+                name: item.name, quantity: item.quantity, 
+                condition: ((item.quantity / 250) * 100) >= 30 ? false : true})}>
+                <SpaceName>
+                    <Text ellipsizeMode={"middle"}>{item.name}</Text>
+                    <Progress quantity={item.quantity} size={180}/>
+                </SpaceName>
+                <SpaceIcon>
+                    <Icon
+                    name='navigate-next'
+                    color='#757575'
+                    />
+                </SpaceIcon>
+            </TouchList>
         )
     }
     return (
@@ -61,7 +61,7 @@ const PestList = ({navigation}) =>{
             style={{position:'relative'}}
             data={pests}
             renderItem={({item})=> renderItem(item)}
-            keyExtractor={(item,index)=> index.toFixed()}
+            keyExtractor={(_,index)=> index.toFixed()}
             />
             }
             <ButtomRefresh>

@@ -6,21 +6,21 @@ import Login from '../pages/Login/Login';
 
 const Navigation = createStackNavigator({
     Login:{
-        screen : Login,navigationOptions:{
-            headerShown : false
-        }
+        screen : Login
     },
     Home:{
-        screen: PestList, navigationOptions:{
-            headerShown: false
-        }
+        screen: PestList
     },
     FeedBack:{
-        screen: ViewFeedback, navigationOptions:{
-            headerTitle: false
+        screen: ViewFeedback,navigationOptions:{
+            headerShown: true
         }
     }
 },{
-    initialRouteName: 'Login'
+    initialRouteName: 'Login',
+    defaultNavigationOptions:{
+        headerShown: false,
+        headerTitle: false
+    }
 })
 export default createAppContainer(Navigation);

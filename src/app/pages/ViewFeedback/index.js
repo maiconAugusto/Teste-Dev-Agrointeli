@@ -42,3 +42,8 @@ export const TextAlertInfo = styled.Text`
     font-size: 14px;
     margin-bottom: 20px;
 `
+export const TextNameAlert = styled.Text`
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+`
